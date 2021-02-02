@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cat</title>
+    
+<% begin %>
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track' => 'reload', media: 'all' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+<% rescue %>
+  <script>
+    window.location.replace "#{user_session_url()}"
+  </script>
+<% end %>
+
+  <body>
+    <style>
+
+body {
+  background-image: url('https://www.jenningswire.com/wp-content/uploads/2013/06/happy-business-team.jpg');
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+   background-size: 100% 100%;
+}
+</style>
+    <%= yield %>
+  </body>
+</html>

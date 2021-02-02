@@ -1,0 +1,2 @@
+module Attendance2sHelper
+end

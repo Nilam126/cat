@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Employee</h1></center>
+<style>
+    
+
+    table,th,td
+    {
+      border:1px solid black;
+      
+    border-radius: 5px;
+      padding: 10px;
+
+    }
+    th,td
+    {
+      padding: 10px;
+  background-color: hsl(316, 14%, 78%);
+  color: black
+}
+
+  
+    }
+
+  </style>
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Salary</th>
+      <th>Gender</th>
+      <th>Contact</th>
+      <th>Email</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>Pincode</th>
+      <th>Address</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employee2s.each do |employee2| %>
+      <tr>
+        <td><%= employee2.firstname %></td>
+        <td><%= employee2.lastname %></td>
+        <td><%= employee2.salary %></td>
+        <td><%= employee2.gender %></td>
+        <td><%= employee2.contact %></td>
+        <td><%= employee2.email %></td>
+        <td><%= employee2.country %></td>
+        <td><%= employee2.city %></td>
+        <td><%= employee2.pincode %></td>
+        <td><%= employee2.address %></td>
+        <td><%= link_to 'Show', employee2 %></td>
+        <td><%= link_to 'Edit', edit_employee2_path(employee2) %></td>
+        <td><%= link_to 'Destroy', employee2, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<center>
+<%= link_to '<button type="button">New Employee</button>'.html_safe, new_employee2_path %>
+<%= link_to '<button type="button">Back</button>'.html_safe, welcome_path %>

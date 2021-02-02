@@ -1,0 +1,47 @@
+<%= form_with(model: attendace3) do |form| %>
+  <% if attendace3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attendace3.errors.count, "error") %> prohibited this attendace3 from being saved:</h2>
+
+      <ul>
+        <% attendace3.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :employeeid %>
+    <%= form.number_field :employeeid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employeename %>
+    <%= form.text_field :employeename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :intime %>
+    <%= form.text_field :intime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outtime %>
+    <%= form.text_field :outtime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discription %>
+    <%= form.text_field :discription %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,97 @@
+
+
+<style>
+  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+ }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+}
+</style>
+</head>
+
+</center>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+   background-size: 100% 100%;
+ 
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 2px;
+  text-align: center;
+  }
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1> Welcome To Employee Desk</h1>
+
+<div class="topnav">
+
+ <h2><li><a href='employee2s/new'>  new employee</a></li>
+
+<h2><a href='employee2s'>  Employee Details</a></li>
+
+
+<h2><li><a href='attendace3s/new'> New Attendance</a></li>
+ <h2> <a href='attendace3s'>  Attendance Details</a></li>
+ 	
+<h2> <%= link_to 'Log Out', controller:"sessions",action:'destroy' %> </h2>
+
+</div>
+
+</ul>
+</div>
+</body>
+</div>
+
+
+ 

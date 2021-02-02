@@ -1,0 +1,83 @@
+
+<center>
+<style>
+  body{
+    background-image: url(https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fblogs-images.forbes.com%2Fpavelkrapivin%2Ffiles%2F2018%2F09%2FHappy-Employee-Working-Laptop-AdobeStock_171333654-by-By-Drobot-Dean-1200x801.jpg);
+    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+   background-size: 100% 100%;
+   font-size: 20px;
+   font-family: "Times New Roman", Times, serif;
+
+  }
+</style>
+<%= form_with(model: employee2) do |form| %>
+  <% if employee2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee2.errors.count, "error") %> prohibited this employee2 from being saved:</h2>
+
+      <ul>
+        <% employee2.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :firstname %>
+    <%= form.text_field :firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pincode %>
+    <%= form.number_field :pincode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</center>

@@ -1,0 +1,72 @@
+
+<p id='alert'><%= alert %></p>
+<h1>Login</h1>
+<%= form_tag sessions_path do |form| %>
+ <div class='field'>
+   <%= label_tag :id %>
+   <%= text_field_tag :uid %>
+ </div>
+ <div class='field'>
+   <%= label_tag :password %>
+   <%= password_field_tag :password %>
+ </div>
+ <div class="from_button">
+	<%= submit_tag("Login") %>
+ </div>
+<% end %>
+
+
+ <h2> <%= link_to '<button type="button">Register Now</button>'.html_safe, signup_path %>
+
+
+</center>
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+ 
+<style>   
+Body {  
+  font-family: Snell Roundhand, cursive
+
+  background-color: pink; 
+  background-image: url(https://previews.123rf.com/images/dolgachov/dolgachov1109/dolgachov110900486/10624152-picture-of-happy-woman-with-laptop-computer.jpg); 
+  font-size:20px;
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 20%;  
+        color: orange;   
+        padding: 20px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer; 
+
+         }   
+ 
+ input[type=text], input[type=password] {   
+        width: 20%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+    
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: lightblue;  
+    }   
+</style>   
+</head>    
+<body>    
+     
+  
+    </form>     
+</body>     
+</html>  

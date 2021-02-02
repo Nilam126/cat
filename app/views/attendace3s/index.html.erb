@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<center><h1>Attendance</h1>
+<style>
+    
+
+    table,th,td
+    {
+      border:1px solid black;
+      
+    border-radius: 5px;
+      padding: 10px;
+
+    }
+    th,td
+    {
+      padding: 10px;
+  background-color: hsl(316, 14%, 78%);
+  color: black
+}
+
+  
+    }
+
+  </style>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Employeeid</th>
+      <th>Employeename</th>
+      <th>Date</th>
+      <th>Intime</th>
+      <th>Outtime</th>
+      <th>Discription</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendace3s.each do |attendace3| %>
+      <tr>
+        <td><%= attendace3.employeeid %></td>
+        <td><%= attendace3.employeename %></td>
+        <td><%= attendace3.date %></td>
+        <td><%= attendace3.intime %></td>
+        <td><%= attendace3.outtime %></td>
+        <td><%= attendace3.discription %></td>
+        <td><%= link_to 'Show', attendace3 %></td>
+        <td><%= link_to 'Edit', edit_attendace3_path(attendace3) %></td>
+        <td><%= link_to 'Destroy', attendace3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to '<button type="button">New Attendance</button>'.html_safe, new_attendace3_path %>
+<%= link_to '<button type="button">Back</button>'.html_safe, welcome_path %>
